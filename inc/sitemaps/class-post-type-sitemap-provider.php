@@ -586,7 +586,6 @@ class WPSEO_Post_Type_Sitemap_Provider implements WPSEO_Sitemap_Provider {
 			WHERE {$status_where}
 				AND {$wpdb->posts}.post_type = %s
 				AND {$wpdb->posts}.post_password = ''
-				AND {$wpdb->posts}.post_date != '0000-00-00 00:00:00'
 		";
 
 		return $wpdb->prepare( $where_clause, $post_type );
